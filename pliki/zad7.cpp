@@ -23,27 +23,27 @@ using namespace std;
  ***********/
 
 void zla_funkcja() {
-    cout << "Weszliśmy do złej funkcji!!!" << '\n';
-    exit(0);
+	cout << "Weszliśmy do złej funkcji!!!" << '\n';
+	exit(0);
 }
 
 void na_koniec(void* adr) {
 
-    // Tutaj mozesz pisać swój kod
+	// Tutaj mozesz wpisywać swój kod
 
-
+	
 }
 
 long long silnia(long long n) {
-    if(n == 0) {
-        na_koniec(&n);
-        return 1;
-    }
-    return n * silnia(n-1);
+	if(n == 0) {
+		na_koniec(&n);
+		return 1;
+	}
+	return n * silnia(n-1);
 }
 
 int main() {
-    wypisz(silnia(10));
+	wypisz(silnia(10));
 
-    return 0;
+	return 0;
 }

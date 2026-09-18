@@ -15,7 +15,7 @@ zad5: zad5.cpp
 	g++ zad5.cpp biblioteka.cpp -O2 -o zad5 -std=c++20
 
 zad6: zad6.cpp
-	g++ zad6.cpp biblioteka.cpp -O2 -o zad6 -std=c++20
+	g++ zad6.cpp biblioteka.cpp -Og -o zad6 -std=c++20
 
 zad7: zad7.cpp
 	g++ zad7.cpp biblioteka.cpp -O1 -o zad7 -std=c++20

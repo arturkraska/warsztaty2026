@@ -6,7 +6,8 @@ using namespace std;
 /*********** 
  * Zadanie 2: Stwórz tablicę jednowymiarową dowolnego typu i sprawdź jakie są
  * adresy jej komórek.
- * Następnie powtórz eksperyment dla tablic dwuwymiarowej oraz trzywymiarowej.
+ * Następnie powtórz eksperyment dla tablic dwuwymiarowej a może nawet dla 
+ * trzywymiarowej.
  * 
  * Czy jesteś w stanie określić w jakiej kolejności komórki tablic
  * wielowymiarowych zostały ułożone w pamięci?
@@ -17,8 +18,9 @@ using namespace std;
 
 int main() {
 
-    // Tutaj możesz pisać swój kod
+	// Tutaj możesz pisać swój kod
 
+	
 
-    return 0;
+	return 0;
 }

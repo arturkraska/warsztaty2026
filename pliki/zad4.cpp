@@ -21,8 +21,9 @@ using namespace std;
 
 int main() {
 
-    // Tutaj możesz pisać swój kod
+	// Tutaj możesz pisać swój kod
 
+	
 
-    return 0;
+	return 0;
 }
