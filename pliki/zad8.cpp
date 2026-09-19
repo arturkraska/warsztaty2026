@@ -7,8 +7,8 @@ using namespace std;
  * Zadanie 8: Poniżej znajduje się prosta funkcja, która wczytuje z wejścia n liczb,
  * po czym wypisuje ich sumę.
  * Co się stanie, jeśli podasz tej funkcji 3 liczby?
- * Co się stanie, jeśli podasz tej funkcji 10 liczb?
- * Co się stanie, jeśli ósma liczba (licząc od 1) będzie równa 4199232?
+ * Co się stanie, jeśli podasz tej funkcji 12 liczb?
+ * Co się stanie, jeśli dwunasta liczba (licząc od 1) będzie równa 4199392?
  * 
  * Poniższy kod ma wyłączone kilka zabezpieczeń, między innymi:
  * - kod znajduje się zawsze pod tym samym adresem,
@@ -20,7 +20,7 @@ using namespace std;
  ***********/
 
 void ups() {
-	cout << "Ups, zła funkcja! :O" << '\n';
+	wypisz("Ups, zła funkcja! :O");
 	exit(0);
 }
 
@@ -28,14 +28,16 @@ void policz_sume() {
 	long long n, suma = 0, tab[4];
 
 	// Później usuń komentarz z poniższego wywołania funkcji
-	podpowiedz_do_ataku(tab);
+	// podpowiedz_do_ataku(tab);
 
-	cin >> n;
+	wypisz("Podaj liczbę n, a następnie n liczb:");
+	wczytaj(n);
 	for(int i = 0; i < n; i++) {
-		cin >> tab[i];
+		wczytaj(tab[i]);
 		suma += tab[i];
 	}
-	cout << "Suma to " << suma << '\n';
+	wypisz("Suma to:");
+	wypisz(suma);
 	return;
 }
 

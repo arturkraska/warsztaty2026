@@ -23,9 +23,9 @@ using namespace std;
 struct samochod {
 	char kolor;
 	long long cena;
-	char pojemność_baku;
+	char pojemnosc_baku;
 	long long spalanie;
-	char liczba_siedzeń;
+	char liczba_siedzen;
 	int przebieg;
 	char wersja;
 };
@@ -37,9 +37,9 @@ int main() {
 
 	s.kolor = 1;
 	s.cena = 2;
-	s.pojemność_baku = 3;
+	s.pojemnosc_baku = 3;
 	s.spalanie = 4;
-	s.liczba_siedzeń = 5;
+	s.liczba_siedzen = 5;
 	s.przebieg = 6;
 	s.wersja = 7;
 

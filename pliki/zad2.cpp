@@ -4,16 +4,14 @@
 using namespace std;
  
 /*********** 
- * Zadanie 2: Stwórz tablicę jednowymiarową dowolnego typu i sprawdź jakie są
- * adresy jej komórek.
- * Następnie powtórz eksperyment dla tablic dwuwymiarowej a może nawet dla 
- * trzywymiarowej.
+ * Zadanie 2: Stwórz jedną zmienną i sprawdź jaki jest jej adres. Możesz do tego użyć 
+ * funkcji `adres_na_liczbe(adres)`, która zamienia adres na liczbę typu long long.
  * 
+ * Następnie stwórz tablicę jednowymiarową dowolnego typu i sprawdź jakie są adresy 
+ * jej komórek. Później powtórz eksperyment dla tablicy dwuwymiarowej, a może nawet 
+ * dla trzywymiarowej.
  * Czy jesteś w stanie określić w jakiej kolejności komórki tablic
  * wielowymiarowych zostały ułożone w pamięci?
- * 
- * Aby zamienić adres na liczbę wystarczy ją zrzutować na typ long long, albo
- * użyć funkcji `adres_na_liczbe(adres)` z biblioteki.
  ***********/
 
 int main() {

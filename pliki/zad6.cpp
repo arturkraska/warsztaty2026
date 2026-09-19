@@ -8,6 +8,12 @@ using namespace std;
  * na ciąg (trudnych do zrozumienia) bajtów również znajduje się w pamięci.
  * Spróbuj go wypisać za pomocą funkcji `wypisz_pamiec_w_bajtach()`.
  * 
+ * Wskazówki:
+ * - aby otrzymać adres do funkcji wystarczy zrzutować jej nazwę na typ (void*),
+ * - ciąg bajtów `72 41 240` z dużą szansą oznacza odejmowanie,
+ * - ciąg bajtów `72 1 240` z dużą szansą oznacza dodawanie,
+ * - bajt `195` może oznaczać koniec funkcji.
+ * 
  * Czy jesteś w stanie zamienić tą funkcję na dodawanie?? 
  * W funkcji `main()` są wczytywane z wejścia dwie liczby, oraz dwukrotnie została 
  * wywołana funkcja `odejmij()`. Znajdź bajt, który należy zamienić na inną wartość 
@@ -15,13 +21,8 @@ using namespace std;
  * Oba argumenty niech będą liczbami long long.
  * Jaki jest efekt?
  * 
- * Wskazówki:
- * - ciąg bajtów `72 41 240` z dużą szansą oznacza odejmowanie,
- * - ciąg bajtów `72 1 240` z dużą szansą oznacza dodawanie,
- * - bajt `195` może oznaczać koniec funkcji.
- * 
  * Czy uda Ci się osiągnąć lepszy efekt za pomocą funkcji 
- * `zamien_bajt_pamieci_zmieniajac_uprawnienia_dostepu(adres, wartosc)`? ;)
+ * `zamien_bajt_pamieci_zmieniajac_uprawnienia(adres, wartosc)`? ;)
  ***********/
 
 long long odejmij(long long a, long long b) {
@@ -42,7 +43,7 @@ int main() {
 	wczytaj(b);
 
 	wypisz("Przed modyfikacjami różnica to:");
-	cout << odejmij(a, b) << '\n';
+	wypisz(odejmij(a, b));
 
 	// Tutaj spróbuj zmodyfikować odpowiedni bajt pamięci, aby zamienić 
 	// odejmowanie na dodawanie
@@ -52,7 +53,7 @@ int main() {
 
 
 	wypisz("Po modyfikacjach różnica to:");
-	cout << odejmij(a, b) << '\n';
+	wypisz(odejmij(a, b));
 
 	return 0;
 }

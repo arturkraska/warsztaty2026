@@ -16,7 +16,7 @@ using namespace std;
  * Adres zmiennej można pobrać za pomocą operatora &.
  * Tablica jest "sama w sobie adresem".
  * 
- * Czy bajty większych liczb układają sie tak jak można się było spodziewać?
+ * Czy bajty większych liczb układają się tak jak można się było spodziewać?
  ***********/
 
 int main() {
