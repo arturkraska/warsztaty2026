@@ -14,3 +14,4 @@ void wypisz_pamiec_w_bajtach(void* adres, int ile_bajtow);
 void wypisz_pamiec_w_long_longach(void* adres, int ile_bajtów);
 void zamien_bajt_pamieci(long long adres, int wartosc);
 bool zamien_bajt_pamieci_zmieniajac_uprawnienia_dostepu(long long adres, char wartosc);
+void podpowiedz_do_ataku(void* adr);

