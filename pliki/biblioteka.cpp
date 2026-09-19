@@ -85,12 +85,7 @@ void zamien_bajt_pamieci_zmieniajac_uprawnienia_dostepu(long long adres, char wa
 }
 
 void podpowiedz_do_ataku(void* adr) {
-	//wypisz(adres_na_liczbe(adr));
-	//wypisz_pamiec_w_long_longach(adr, 20);
-	//wypisz_pamiec_w_bajtach((void*) zla_funkcja_2, 40);
-	//wypisz_pamiec_w_long_longach((void*) zla_funkcja_2, 10);
-	//res[7] = (long long) &zla_funkcja_2;
-
+	
 	long long res[20] = {0};
 	char str[30] = "/usr/bin/nyancat";
 	long long *tab = (long long*) str;
