@@ -4,10 +4,10 @@
 using namespace std;
  
 /*********** 
- * Zadanie 3: Poniżej znajduje się struktura zawierająca pewne tablice i zmienną
- * oraz funkcja `quiz()`, która wypełnia jej komórki, a następnie wypisuje niektóre 
- * z nich. Oblicz jakie wartości wypisze ta funkcja. Następnie sprawdź poprawność 
- * swoich wyników uruchamiając funkcję `quiz()` w `main()`.
+ * Zadanie 3: Poniżej znajduje się struktura zawierająca pewne tablice i zmienną.
+ * Dana jest funkcja `quiz()`, która wypełnia jej komórki, a następnie wypisuje
+ * niektóre z nich. Oblicz ręcznie jakie wartości wypisze ta funkcja. Następnie
+ * sprawdź poprawność swoich wyników uruchamiając funkcję `quiz()` w `main()`.
  ***********/
 
 struct pamiec {
@@ -48,7 +48,7 @@ void quiz() {
 
 int main() {
 
-	// Jak wyliczysz wszystkie odpowiedzi, to usuń komentarz z kolejnej linijki.
+	// Jak wyliczysz wszystkie odpowiedzi, to usuń komentarz z kolejnej linijki
 	// quiz();
 
 	return 0;

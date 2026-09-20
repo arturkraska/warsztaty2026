@@ -4,8 +4,8 @@
 using namespace std;
  
 /*********** 
- * Zadanie 5: Policz ile miejsca powinna zawierać zmienna typu `samochod`.
- * Następnie stwórz taką zmienną i sprawdz jej rozmiar funkcją `sizeof()`. 
+ * Zadanie 5: Policz ręcznie ile miejsca powinna zajmować zmienna typu `samochod`.
+ * Następnie sprawdź rozmiar zmiennej `s` za pomocą funkcji `sizeof()`.
  * Czy wartości te są takie same?
  * 
  * Spróbuj sprawdzić jak bardzo oddalone są pola tej struktury od jej początku.
@@ -15,7 +15,7 @@ using namespace std;
  * - licząc różnicę danego pola od początku struktury, używając funkcji 
  *   `adres_na_liczbe()`, po czym odejmując od siebie dane adresy.
  * 
- * Okazuje się, że zmianieając kolejność pól w strukturze możemy zamienić jej rozmiar. 
+ * Okazuje się, że zmieniając kolejność pól w strukturze możemy zmienić jej rozmiar.
  * Spróbuj wydedukować dlaczego pomiędzy niektórymi jej polami są "dziury", a 
  * następnie spróbuj znaleźć takie ułożenie, które zminimalizuje jej rozmiar. 
  ***********/

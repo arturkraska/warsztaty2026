@@ -55,7 +55,7 @@ void wypisz_pamiec_w_long_longach(void* adres, int ile_liczb) {
 		if(i % 4 == 0) {
 			cout << "\n" << (long long) adr << ":";
 		}
-		cout << " " << setw(20) << (unsigned long long)*(adr);
+		cout << " " << setw(20) << (long long)*(adr);
 		adr++;
 	}
 	cout << '\n';

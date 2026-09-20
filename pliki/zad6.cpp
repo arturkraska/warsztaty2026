@@ -36,7 +36,7 @@ int main() {
 	
 
 
-	// Wczytujemy z wejścia dwie liczby, które będzie odejmować
+	// Wczytujemy z wejścia dwie liczby, które będziemy odejmować
 	long long a, b; 
 	wypisz("Podaj dwie liczby: a, b:");
 	wczytaj(a);

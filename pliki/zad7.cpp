@@ -6,8 +6,8 @@ using namespace std;
 /*********** 
  * Zadanie 7: Poniższe wywołanie funkcji `silnia(10)` wygeneruje 10 wywołań 
  * rekurencyjnych. Zanim się one skończą, ich argumenty (parametr `n`) oraz
- * adresy w kodzie, do których funkcja musi powrócić, będą przetrzymywane w
- * części pamięci zwanej stosem.
+ * adresy w kodzie, do których funkcja musi powrócić po zakończeniu wywołania,
+ * będą przetrzymywane w części pamięci zwanej stosem.
  * 
  * W ostatnim wywołaniu rekurencyjnym zostaje również wywołana funkcja 
  * `na_koniec()`. Użyj jej, aby wypisać zawartość stosu w momencie, gdy żadne 
