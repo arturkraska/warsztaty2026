@@ -50,7 +50,7 @@ void wypisz_pamiec_w_bajtach(void* adres, int ile_bajtow) {
 
 void wypisz_pamiec_w_long_longach(void* adres, int ile_liczb) {
 	long long* adr = (long long*)adres;
-	cout << "Zawartość " << ile_liczb << " bajtów od " << (long long) adres << ":";
+	cout << "Zawartość " << ile_liczb << " liczb od " << (long long) adres << ":";
 	for(int i = 0; i < ile_liczb; i++) {
 		if(i % 4 == 0) {
 			cout << "\n" << (long long) adr << ":";
